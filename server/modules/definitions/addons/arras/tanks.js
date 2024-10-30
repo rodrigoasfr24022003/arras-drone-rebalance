@@ -118,7 +118,7 @@ Class.director = {
             },
             POSITION: [6, 11, 1.3, 7, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.drone]),
+                SHOOT_SETTINGS: combineStats([g.drone, g.droneRebalance]),
                 TYPE: "drone",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
@@ -345,7 +345,7 @@ Class.cruiser = {
         {
             POSITION: [7, 7.5, 0.6, 7, 4, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -353,7 +353,7 @@ Class.cruiser = {
         {
             POSITION: [7, 7.5, 0.6, 7, -4, 0, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -640,7 +640,7 @@ Class.overseer = {
     GUNS: weaponArray({
         POSITION: [6, 12, 1.2, 8, 0, 90, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.overseer, g.droneRebalance]),
             TYPE: "drone",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,
@@ -747,7 +747,7 @@ Class.spawner = {
             POSITION: [1, 12, 1, 15, 0, 0, 0],
             PROPERTIES: {
                 MAX_CHILDREN: 4,
-                SHOOT_SETTINGS: combineStats([g.factory, g.babyfactory]),
+                SHOOT_SETTINGS: combineStats([g.factory, g.babyfactory, g.factoryRebalance]),
                 TYPE: "minion",
                 STAT_CALCULATOR: "drone",
                 AUTOFIRE: true,
@@ -1060,7 +1060,7 @@ Class.banshee = makeRadialAuto("bansheegun", {isTurret: true, danger: 7, size: 1
 Class.banshee.GUNS = weaponArray({
     POSITION: [6, 11, 1.2, 8, 0, 60, 0],
     PROPERTIES: {
-        SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+        SHOOT_SETTINGS: combineStats([g.drone, g.overseer, g.droneRebalance]),
         TYPE: "drone",
         AUTOFIRE: true,
         SYNCS_SKILLS: true,
@@ -1120,7 +1120,7 @@ Class.battleship = {
         {
             POSITION: [7, 7.5, 0.6, 7, 4, 90, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
                 LABEL: "Guided"
@@ -1129,7 +1129,7 @@ Class.battleship = {
         {
             POSITION: [7, 7.5, 0.6, 7, -4, 90, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.droneRebalance]),
                 TYPE: "autoswarm",
                 STAT_CALCULATOR: "swarm",
                 LABEL: "Autonomous"
@@ -1138,7 +1138,7 @@ Class.battleship = {
         {
             POSITION: [7, 7.5, 0.6, 7, 4, 270, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.droneRebalance]),
                 TYPE: "autoswarm",
                 STAT_CALCULATOR: "swarm",
                 LABEL: "Autonomous"
@@ -1147,7 +1147,7 @@ Class.battleship = {
         {
             POSITION: [7, 7.5, 0.6, 7, -4, 270, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
                 LABEL: "Guided"
@@ -1425,7 +1425,7 @@ Class.carrier = {
         {
             POSITION: [7, 8, 0.6, 7, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -1433,7 +1433,7 @@ Class.carrier = {
         {
             POSITION: [7, 8, 0.6, 7, 2, 30, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -1441,7 +1441,7 @@ Class.carrier = {
         {
             POSITION: [7, 8, 0.6, 7, -2, -30, 0.5],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.battleship, g.carrier, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -1514,7 +1514,7 @@ Class.commander = {
         ...weaponArray({
             POSITION: [8, 11, 1.3, 6, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.drone]),
+                SHOOT_SETTINGS: combineStats([g.drone, g.droneRebalance]),
                 TYPE: "drone",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
@@ -1525,7 +1525,7 @@ Class.commander = {
         ...weaponArray({
             POSITION: [7, 7.5, 0.6, 7, 0, 60, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm, g.commander]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.commander, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -1849,7 +1849,7 @@ Class.factory = {
         {
             POSITION: [2, 14, 1, 15.5, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.factory]),
+                SHOOT_SETTINGS: combineStats([g.factory, g.factoryRebalance]),
                 TYPE: "minion",
                 MAX_CHILDREN: 6,
                 STAT_CALCULATOR: "drone",
@@ -2036,7 +2036,7 @@ Class.fortress = {
         {
             POSITION: [7, 7.5, 0.6, 7, 0, 60, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.swarm]),
+                SHOOT_SETTINGS: combineStats([g.swarm, g.droneRebalance]),
                 TYPE: "swarm",
                 STAT_CALCULATOR: "swarm",
             },
@@ -2048,7 +2048,7 @@ Class.fortress = {
             {
                 POSITION: [4, 9, 1.5, 14, 0, 0, 0],
                 PROPERTIES: {
-                    SHOOT_SETTINGS: combineStats([g.trap, { range: 0.5, speed: 0.7, maxSpeed: 0.7 }]),
+                    SHOOT_SETTINGS: combineStats([g.trap, { range: 0.5, speed: 0.7, maxSpeed: 0.7 }, g.droneRebalance]),
                     TYPE: "trap",
                     STAT_CALCULATOR: "trap",
                 },
@@ -2350,7 +2350,7 @@ Class.manager = {
         {
             POSITION: [6, 12, 1.2, 8, 0, 0, 0],
             PROPERTIES: {
-                SHOOT_SETTINGS: combineStats([g.drone, g.overseer, { reload: 0.5 }]),
+                SHOOT_SETTINGS: combineStats([g.drone, g.overseer, { reload: 0.5 }, g.droneRebalance]),
                 TYPE: "drone",
                 AUTOFIRE: true,
                 SYNCS_SKILLS: true,
@@ -2675,7 +2675,7 @@ Class.overdrive = {
     GUNS: weaponArray({
         POSITION: [6, 12, 1.2, 8, 0, 90, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.overseer, g.droneRebalance]),
             TYPE: "turretedDrone",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,
@@ -2698,7 +2698,7 @@ Class.overlord = {
     GUNS: weaponArray({
         POSITION: [6, 12, 1.2, 8, 0, 0, 0],
         PROPERTIES: {
-            SHOOT_SETTINGS: combineStats([g.drone, g.overseer]),
+            SHOOT_SETTINGS: combineStats([g.drone, g.overseer, g.droneRebalance]),
             TYPE: "drone",
             AUTOFIRE: true,
             SYNCS_SKILLS: true,
