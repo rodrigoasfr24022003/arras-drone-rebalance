@@ -67,6 +67,8 @@ module.exports = {
     bigCheese: { reload: 1.5, size: 1.8, health: 2.5, speed: 1.25 },
     mothership: { reload: 1.25, pen: 1.1, speed: 0.775, maxSpeed: 0.8, range: 15, resist: 1.15 },
     satellite: { size: 0.8, reload: 3, damage: 1.875 },
+    droneRebalance: { health: 3.5, damage: 0.3 },
+    factoryRebalance: { health: 0.5 },
 
 // Heavy cannons
     pounder: { reload: 2, recoil: 1.6, damage: 2, speed: 0.85, maxSpeed: 0.8, density: 1.5, resist: 1.15 },
